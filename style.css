@@ -1,0 +1,125 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --font-title:"Big Shoulders Display", sans-serif;
+    --font-style:"Lexend Deca", sans-serif;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+   
+}
+
+
+.Sedans-info,
+.SUVs-info,
+.Luxury-info{
+    font-size: 10px;
+    font-family: var(--font-style);
+    width: 140px;
+    line-height: 1.8;
+    color: white;
+    padding-bottom: 80px;
+    font-weight: 400;
+}
+
+.Sedans,
+.SUVs,
+.Luxury{
+    
+    padding-left: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+.Sedans-title,
+.SUVs-title,
+.Luxury-title{
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Sedans-more,
+.SUVs-more,
+.Luxury-more{
+    width: 120px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.Sedans-more:hover,
+.SUVs-more:hover,
+.Luxury-more:hover{
+    cursor: pointer;
+    color: inherit;
+    background-color: white;
+}
+
+.Sedans-more:hover{color: var(--Bright-orange);}
+.SUVs-more:hover{color: var(--Dark-cyan);}
+.Luxury-more:hover{color: var(--Very-dark-cyan);}
+
+.Sedans{
+    background-color: var(--Bright-orange);
+}
+
+
+.SUVs{
+    background-color: var(--Dark-cyan);
+    
+}
+
+.Luxury{
+    background-color: var(--Very-dark-cyan);
+    
+}
+
+@media (min-width:100px) and (max-width:400px){
+    .container{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+       
+    }
+    .Sedans-info,
+    .SUVs-info,
+    .Luxury-info{
+        width:160px;
+        padding-bottom: 20px;
+    }
+    .Sedans-more,
+    .SUVs-morem,
+    .Luxury-more{
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (min-width:400px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 400px;
+       width: 900px;
+       
+    }
+}
